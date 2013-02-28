@@ -90,6 +90,17 @@ Validator.prototype = {
 		max : function(target, value) { return value.length <= target; },
 		min : function(target, value) { return value.length >= target; },
 		boolean : function(target, value) { return !target || (!!value === value); },
+		unique : function(target, value) {
+			if(value instanceof Array) {
+				var obj = value.reduce(function(init, v) {
+					init[v] = true;
+					return init;
+				}, {});
+
+				return Object.keys(obj).length == value.length;
+			}
+			return true;
+		},
 		enum : function(target, value) {
 			if(!(target instanceof Array)) {
 				throw new Error("Enum value must be an array");
