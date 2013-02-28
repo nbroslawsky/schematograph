@@ -1,0 +1,10 @@
+{
+	"name": "js-schema",
+	"version": "0.1.0",
+	"description": "Javascript Schema Validation Library",
+	"repository": {
+		"type": "git",
+		"url": "git@git.corp.yahoo.com:media-contributor/js-schema.git"
+	},
+	"dependencies" : {}
+}
