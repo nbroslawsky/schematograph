@@ -87,9 +87,37 @@ Validator.prototype = {
 				? ((value !== null) && (value !== undefined))
 				: true;
 		},
-		max : function(target, value) { return value.length <= target; },
-		min : function(target, value) { return value.length >= target; },
+		max : function(target, value) {
+			if(value.length) {
+				return value.length <= target;
+			}
+			return value <= target;
+		},
+		min : function(target, value) {
+			if(value.length) {
+				return value.length >= target;
+			}
+			return value >= target;
+		},
 		boolean : function(target, value) { return !target || (!!value === value); },
+		each : function(target, value) {
+
+			var self = this,
+				results = Object.keys(target)
+					.reduce(function(init, funcName) {
+						var localSuccess = true;
+						var verdicts = value.map(function(item) {
+							var verdict = !!self.validators[funcName].call(self, target[funcName], item);
+							localSuccess &= verdict;
+							return verdict;
+						});
+
+						init[funcName] = localSuccess;
+						return init;
+					}, {});
+
+			return Object.keys(results).reduce(function(init, v) { return init & !!results[v]; }, 1);
+		},
 		unique : function(target, value) {
 			if(value instanceof Array) {
 				var obj = value.reduce(function(init, v) {

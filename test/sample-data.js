@@ -61,6 +61,12 @@ var schema = {
 			return value === 'theonlythingiaccept';
 		}
 	},
+	ints: {
+		each: {
+			type: Number,
+			max: 100
+		}
+	},
 	isValid: {
 		type: Boolean,
 		boolean: true
@@ -102,7 +108,8 @@ Integer id elementum sapien. Mauris est sapien, aliquet aliquet bibendum at, dig
 	isValid : false,
 	nested : {
 		hello : 'thar'
-	}
+	},
+	ints : [1,2,3,4,5]
 };
 
 
