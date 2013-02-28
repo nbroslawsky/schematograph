@@ -102,6 +102,8 @@ Validator.prototype = {
 		boolean : function(target, value) { return !target || (!!value === value); },
 		each : function(target, value) {
 
+			if(!(value instanceof Array)) { return true; }
+
 			var self = this,
 				results = Object.keys(target)
 					.reduce(function(init, funcName) {
