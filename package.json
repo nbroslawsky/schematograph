@@ -6,5 +6,12 @@
 		"type": "git",
 		"url": "git@git.corp.yahoo.com:media-contributor/js-schema.git"
 	},
-	"dependencies" : {}
+	"main": "./lib/validator.js",
+	"scripts": {
+		"test": "./node_modules/.bin/mocha test/*.test.js"
+	},
+	"devDependencies": {
+		"chai": "1.5.x",
+		"mocha": "1.8.x"
+	}
 }
