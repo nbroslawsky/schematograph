@@ -1,17 +1,17 @@
 {
-	"name": "js-schema",
-	"version": "0.1.0",
-	"description": "Javascript Schema Validation Library",
-	"repository": {
-		"type": "git",
-		"url": "git@git.corp.yahoo.com:media-contributor/js-schema.git"
-	},
-	"main": "./lib/validator.js",
-	"scripts": {
-		"test": "./node_modules/.bin/mocha test/*.test.js"
-	},
-	"devDependencies": {
-		"chai": "1.5.x",
-		"mocha": "1.8.x"
-	}
+  "name": "js-schema",
+  "version": "0.1.1",
+  "description": "Javascript Schema Validation Library",
+  "repository": {
+    "type": "git",
+    "url": "git@git.corp.yahoo.com:media-contributor/js-schema.git"
+  },
+  "main": "./lib/validator.js",
+  "scripts": {
+    "test": "./node_modules/.bin/mocha test/*.test.js"
+  },
+  "devDependencies": {
+    "chai": "1.5.x",
+    "mocha": "1.8.x"
+  }
 }
