@@ -18,7 +18,8 @@ module.exports = function() {
 		publishDate : new Date(),
 		isValid : false,
 		nested : {
-			hello : 'thar'
+			hello : 'thar',
+			someNumber: 1234
 		},
 		ints : [1,2,3,4,5]
 	};
