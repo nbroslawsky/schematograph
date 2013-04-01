@@ -3,41 +3,38 @@ var assert = require('chai').assert,
 
 describe('oneOf', function() {
 
-	var schemaA = {
-			type: {
-				type: String,
-				present: true
-			},
-			body: {
-				type: String,
-				present: true
-			}
-		},
-		schemaB = {
-			type: {
-				type: String,
-				present: true
-			},
-			url: {
-				type: String,
-				present: true
-			}
-		},
-		schema = {
+	var schema = {
 			assets: {
 				type: Array,
-				oneOf: [
-					schemaA,
-					schemaB
-				]
+				oneOf: [{
+					type: {
+						type: String,
+						present: true
+					},
+					body: {
+						type: String,
+						present: true
+					}
+				},{
+					type: {
+						type: String,
+						present: true
+					},
+					url: {
+						type: String,
+						present: true
+					}
+				}]
 			}
 		},
 		validator = new Validator(schema);
 
-	it.only('should validate with one correct entry', function() {
-		var nested = { type: 'text', body: 'some stuff' },
-			obj = {
-				assets: [ nested ]
+	it('should validate with one correct entry', function() {
+		var obj = {
+				assets: [{
+					type: 'text',
+					body: 'some stuff'
+				}]
 			};
 
 			var v = validator.validate(obj);
