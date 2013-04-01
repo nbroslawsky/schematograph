@@ -81,6 +81,10 @@ module.exports = {
 			hello : {
 				type: String,
 				required: true
+			},
+			someNumber: {
+				type: Number,
+				present: true
 			}
 		}
 	}
