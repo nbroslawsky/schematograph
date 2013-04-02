@@ -34,4 +34,16 @@ describe('Entire Schema', function() {
 		assert.isFalse(v.success);
 	});
 
+	it('should be invalid with a null value', function() {
+		var v = validator.validate(null);
+
+		assert.isFalse(v.success);
+	});
+
+	it('should be invalid with an undefined value', function() {
+		var v = validator.validate(undefined);
+
+		assert.isFalse(v.success);
+	});
+
 });

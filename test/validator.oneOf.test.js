@@ -29,6 +29,15 @@ describe('oneOf', function() {
 		},
 		validator = new Validator(schema);
 
+	it('should NOT validate with a null value', function() {
+		var obj = {
+			assets: null
+		};
+
+		var v = validator.validate(obj);
+		assert.isFalse(v.success);
+	});
+
 	it('should validate with one correct entry', function() {
 		var obj = {
 				assets: [{
