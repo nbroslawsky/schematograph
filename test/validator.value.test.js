@@ -19,15 +19,21 @@ describe('Validator Values', function() {
 		assertValid(validator.validate(obj, schema), 'foo');
 	});
 
-	it('should no coerce the number', function() {
+	it('should not coerce the number', function() {
 		var schema = { foo: { value: '1' } };
 		obj.foo = 1;
 		assertInvalid(validator.validate(obj, schema), 'foo');
 	});
 
-	it('should no coerce falsey items', function() {
-		assertInvalid(validator.validate({ foo : null }, { foo: { value: '' } }), 'foo');
-		assertInvalid(validator.validate({ foo : undefined }, { foo: { value: '' } }), 'foo');
+	it('should ignore undefined values', function() {
+		assertValid(validator.validate({ foo : undefined }, { foo: { value: '' } }), 'foo');
+	});
+
+	it('should ignore null values', function() {
+		assertValid(validator.validate({ foo : null }, { foo: { value: '' } }), 'foo');
+	});
+
+	it('should not coerce falsey items', function() {
 		assertInvalid(validator.validate({ foo : 0 }, { foo: { value: '' } }), 'foo');
 		assertInvalid(validator.validate({ foo : false }, { foo: { value: '' } }), 'foo');
 
