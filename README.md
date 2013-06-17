@@ -1,9 +1,9 @@
-js-schema
+schematograph
 =========
 
 Javascript Schema Validation Library
 
-## Sample Schem
+## Sample Schema
 
 ```
 module.exports = {
