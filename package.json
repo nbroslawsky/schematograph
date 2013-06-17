@@ -1,10 +1,10 @@
 {
-  "name": "js-schema",
+  "name": "schematograph",
   "version": "0.1.7",
   "description": "Javascript Schema Validation Library",
   "repository": {
     "type": "git",
-    "url": "git@git.corp.yahoo.com:media-contributor/js-schema.git"
+    "url": "git@github.com:nbroslawsky/schematograph.git"
   },
   "main": "./lib/validator.js",
   "scripts": {
