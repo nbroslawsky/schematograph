@@ -13,5 +13,17 @@
   "devDependencies": {
     "chai": "1.5.x",
     "mocha": "1.8.x"
+  },
+  "testling": {
+    "browsers": [
+      "ie/9..latest",
+      "firefox/19..latest",
+      "chrome/25..latest",
+      "safari/latest",
+      "iphone/6",
+      "ipad/6"
+    ],
+    "harness" : "mocha-tdd",
+    "files": "tests/*.test.js"
   }
 }
