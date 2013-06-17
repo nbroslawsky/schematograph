@@ -24,6 +24,6 @@
       "ipad/6"
     ],
     "harness" : "mocha-tdd",
-    "files": "tests/*.test.js"
+    "files": "test/*.test.js"
   }
 }
