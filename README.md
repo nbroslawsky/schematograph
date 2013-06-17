@@ -1,6 +1,8 @@
 schematograph
 =========
 
+[![Build Status](https://secure.travis-ci.org/nbroslawsky/schematograph.png?branch=master)](http://travis-ci.org/nbroslawsky/schematograph)
+
 Javascript Schema Validation Library
 
 ## Sample Schema
