@@ -18,6 +18,11 @@ describe('Validator Types', function() {
 			assertInvalid(validator.validate(obj, schema), 'foo');
 		});
 
+		it('should fail for NaN', function() {
+			obj.foo = NaN;
+			assertInvalid(validator.validate(obj, schema), 'foo');
+		});
+
 		it('should fail for true', function() {
 			obj.foo = true;
 			assertInvalid(validator.validate(obj, schema), 'foo');
@@ -50,6 +55,11 @@ describe('Validator Types', function() {
 
 		it('should pass for a number', function() {
 			obj.foo = 1337;
+			assertValid(validator.validate(obj, schema), 'foo');
+		});
+
+		it('should pass for zero', function() {
+			obj.foo = 0;
 			assertValid(validator.validate(obj, schema), 'foo');
 		});
 
