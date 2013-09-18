@@ -25,5 +25,6 @@
     ],
     "harness" : "mocha-tdd",
     "files": "test/*.test.js"
-  }
+  },
+  "license":"MIT"
 }
