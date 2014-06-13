@@ -1,10 +1,10 @@
 {
-  "name": "js-schema",
+  "name": "schematograph",
   "version": "0.1.8",
   "description": "Javascript Schema Validation Library",
   "repository": {
     "type": "git",
-    "url": "git@git.corp.yahoo.com:media-contributor/js-schema.git"
+    "url": "git@github.com:nbroslawsky/schematograph.git"
   },
   "main": "./lib/validator.js",
   "scripts": {
@@ -13,5 +13,18 @@
   "devDependencies": {
     "chai": "1.5.x",
     "mocha": "1.8.x"
-  }
+  },
+  "testling": {
+    "browsers": [
+      "ie/9..latest",
+      "firefox/19..latest",
+      "chrome/25..latest",
+      "safari/latest",
+      "iphone/6",
+      "ipad/6"
+    ],
+    "harness" : "mocha-tdd",
+    "files": "test/*.test.js"
+  },
+  "license":"MIT"
 }

@@ -1,9 +1,12 @@
-js-schema
+schematograph
 =========
+
+[![Build Status](https://secure.travis-ci.org/nbroslawsky/schematograph.png?branch=master)](http://travis-ci.org/nbroslawsky/schematograph)
+[![browser support](http://ci.testling.com/nbroslawsky/schematograph.png)](http://ci.testling.com/nbroslawsky/schematograph)
 
 Javascript Schema Validation Library
 
-## Sample Schem
+## Sample Schema
 
 ```
 module.exports = {
