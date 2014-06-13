@@ -1,0 +1,68 @@
+{
+	"data": {
+		"eCPE": null,
+		"engagement": {
+			"tumblr": {
+				"earned": {
+					"captionClicks": 28515310,
+					"likes": 28356309,
+					"mediaClicks": 28415363,
+					"permalinkClicks": 27881369,
+					"reblogs": 280862,
+					"streamClicks": 27533472,
+					"totalClicks": 112345514,
+					"videoStarts": 27765805
+				},
+				"paid": {
+					"totalClicks": 28136950,
+					"videoStarts": 28136950
+				},
+				"shares": 28006695
+			},
+			"yahoo": {
+				"earned": {
+					"captionClicks": 103193028,
+					"likes": 103796372,
+					"mediaClicks": 103161651,
+					"permalinkClicks": 102601300,
+					"reblogs": 1026528,
+					"streamClicks": 103209382,
+					"totalClicks": 412165361,
+					"videoStarts": 103607827
+				},
+				"paid": {
+					"totalClicks": 103239200,
+					"videoStarts": 103239200
+				},
+				"shares": 102947239
+			}
+		},
+		"followers": {
+			"netChange": -344,
+			"total": 115
+		},
+		"impressions": {
+			"tumblr": {
+				"earned": 2536615,
+				"paid": 28054178,
+				"total": 30590793
+			},
+			"yahoo": {
+				"earned": 10969422,
+				"paid": 103072192,
+				"total": 114041614
+			}
+		},
+		"spend": {
+			"tumblr": {
+				"total": 28196142.49
+			},
+			"yahoo": {
+				"total": 102953392.73
+			}
+		}
+	},
+	"name": "contentMarketingMetrics",
+	"requestId": "3221419599706392947-18818853540901737",
+	"status": "success"
+}
