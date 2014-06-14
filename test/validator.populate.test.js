@@ -72,6 +72,67 @@ describe('Validator Populate', function() {
 		});
 	});
 
+	describe('Real Metrics Data 2', function() {
+
+		var schema = {
+			"engagement": {
+				"schema": {
+					"tumblr": {
+						"schema": {
+							"earned": {
+								"populateMissing": {}
+							},
+							"paid": {
+								"populateMissing": {}
+							}
+						}
+					},
+					"yahoo": {
+						"schema": {
+							"earned": {
+								"populateMissing": {}
+							},
+							"paid": {
+								"populateMissing": {}
+							}
+						}
+					}
+				}
+			},
+			"followers": {
+				"populateMissing": {}
+			},
+			"impressions": {
+				"schema": {
+					"tumblr": {
+						"populateMissing": {}
+					},
+					"yahoo": {
+						"populateMissing": {}
+					}
+				}
+			},
+			"spend": {
+				"schema": {
+					"tumblr": {
+						"populateMissing": {}
+					},
+					"yahoo": {
+						"populateMissing": {}
+					}
+				}
+			}
+		};
+
+		var metrics = require('./sample-data/populate.metrics-2.json');
+
+		it('should be valid for a complete data set', function() {
+			assertValid(validator.validate(metrics, schema));
+			assert.isNotNull(metrics.engagement.tumblr.paid);
+		});
+
+	});
+
 	describe('Real Timeseries Data', function() {
 
 		var schema = {
@@ -150,7 +211,7 @@ describe('Validator Populate', function() {
 		});
 	});
 
-	describe.only('Real Timeseries Data 2', function() {
+	describe('Real Timeseries Data 2', function() {
 
 		var schema = {
 			"timeseries": {
