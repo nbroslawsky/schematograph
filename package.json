@@ -1,6 +1,6 @@
 {
   "name": "schematograph",
-  "version": "0.1.9",
+  "version": "0.1.10",
   "description": "Javascript Schema Validation Library",
   "repository": {
     "type": "git",
