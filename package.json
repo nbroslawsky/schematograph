@@ -1,6 +1,6 @@
 {
   "name": "schematograph",
-  "version": "0.1.8",
+  "version": "0.1.9",
   "description": "Javascript Schema Validation Library",
   "repository": {
     "type": "git",
@@ -23,8 +23,8 @@
       "iphone/6",
       "ipad/6"
     ],
-    "harness" : "mocha-tdd",
+    "harness": "mocha-tdd",
     "files": "test/*.test.js"
   },
-  "license":"MIT"
+  "license": "MIT"
 }
