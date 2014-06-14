@@ -282,6 +282,80 @@ describe('Validator Populate', function() {
 		});
 	});
 
+	describe('Real Timeseries Data 3', function() {
+
+		var schema = {
+			"timeseries": {
+				"schema": {
+					"engagement": {
+						"populateMissing": {},
+						"schema": {
+							"tumblr": {
+								"populate": [],
+								"each": {
+									"schema": {
+										"earned": {
+											"populate": {}
+										},
+										"paid": {
+											"populate": {}
+										}
+									}
+								}
+							},
+							"yahoo": {
+								"populate": [],
+								"each": {
+									"schema": {
+										"earned": {
+											"populate": {}
+										},
+										"paid": {
+											"populate": {}
+										}
+									}
+								}
+							}
+						}
+					},
+					"followers": {
+						"populate": []
+					},
+					"impressions": {
+						"populateMissing": {},
+						"schema": {
+							"tumblr": {
+								"populate": []
+							},
+							"yahoo": {
+								"populate": []
+							}
+						}
+					},
+					"spend": {
+						"populateMissing": {},
+						"schema": {
+							"tumblr": {
+								"populate": []
+							},
+							"yahoo": {
+								"populate": []
+							}
+						}
+					}
+				}
+			}
+		};
+
+		var timeseries = require('./sample-data/populate.timeseries-3.json');
+
+		it('should be valid for a real-world example', function() {
+			assertValid(validator.validate(timeseries, schema));
+			assert.isArray(timeseries.timeseries.engagement.yahoo);
+			assert.isArray(timeseries.timeseries.engagement.tumblr);
+		});
+	});
+
 	function assertValid(validation, field) {
 		assert.isTrue(validation.success);
 		if(field) {
