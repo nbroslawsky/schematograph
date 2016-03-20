@@ -347,7 +347,7 @@ describe('Validator Populate', function() {
 			}
 		};
 
-		var timeseries = require('./sample-data/populate.timeseries-3.json');
+		var timeseries = require('./sample-data/populate.timeseries-2.json');
 
 		it('should be valid for a real-world example', function() {
 			assertValid(validator.validate(timeseries, schema));
